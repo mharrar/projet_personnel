@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:spring="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="/css/menu.css" type="text/css">
+</head>
+<body>
+<center>
+    <div style="margin-top: 40px" class="form">
+        <p>Voici les resultats trouvé monsieur  <span th:text="${userlogin}"></span></p>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>numero de telephone</th>
+                <th>email</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0661542368</td>
+                <td>mehdi0ok@gmail.fr</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>0603964587</td>
+                <td>foot@hotmail.fr</td>
+            </tr>
+        </table>
+        <div class="input-box">
+            <a href="/resultat_neg">
+                <input type="submit" name="chercher" value="resultat  négatif"></a>
+        </div>
+
+
+
+
+    </div>
+</center>
+
+
+</body>
+</html>

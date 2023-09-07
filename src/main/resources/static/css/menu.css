@@ -1,0 +1,38 @@
+body{
+    background: url(https://cdn.pixabay.com/photo/2018/05/15/23/02/football-stadium-3404535_1280.jpg);
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+.header{
+    background-color:#287265;
+    height: 150px;
+    margin: 70px;}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 30px;
+}
+ul li a{
+    color: #fff;
+    letter-spacing: 0.1rem;}
+ul li a:hover{
+    color: #ffd358;
+    text-decoration: underline;
+}
+.menu li{
+    float: left;
+    padding: 35px;}
+.menu li a{
+    text-decoration: none;
+    font-size: 30px;
+}
+h1{
+    
+}
+.form{
+    width:450px ;
+    height: 350px;
+    background-color: bisque;
+}

@@ -1,0 +1,5 @@
+FROM openjdk:11
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp/src/main/java/com.example.projet_industriel_1
+RUN javac ProjetIndustriel1Application.java
+CMD ["java", "Main"]

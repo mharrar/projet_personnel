@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>page de recherche</title>
+    <link rel="stylesheet"  href="/css/barre_recherche.css" type="text/css">
+</head>
+<body>
+<!-- ce template concerne la page ou l'utisateur va remplir le formulaire pour rechercher un match-->
+<center>
+    <div class="form">
+    <form method="post" action="/matching" th:object="${matching}">
+
+        <h2>chercher un match</h2>
+        <div class="input-box">
+            <p>
+            <i class="fa fa-user" aria-hidden="true"></i>
+                <strong><label style="margin-left:50px ;">heure:</label><input type="list" list="list" name="heure" >
+                <datalist id="list">
+                    <option value="8h" />
+                    <option value="9h" />
+                    <option value="10h" />
+                    <option value="11h" />
+                    <option value="12h" />
+                    <option value="13h" />
+                    <option value="14h" />
+                    <option value="15h" />
+                    <option value="16h" />
+                    <option value="17h" />
+                    <option value="18h" />
+                    <option value="19h" />
+                    <option value="20h" />
+                    <option value="21h" />
+                    <option value="22h" />
+                    <option value="23h" />
+                    <option value="00h" />
+
+                </datalist></strong></p>
+        </div>
+        <div class="input-box">
+            <p>
+            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                <strong><label>date:</label><input type="date" date-format="yyyy-mm-dd" name="date">
+            <datalist>
+            </datalist></label></strong>
+            </p>
+        </div>
+        <div class="input-box">
+            <p>
+            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                <strong><label style="margin-left:20px ;"> Nombre de joueurs:</label><input style="margin-right: 60px" type="list" list="liste" name="nbr_joueurs">
+            <datalist id="liste">
+                <option value="5" />
+                <option value="6" />
+
+            </datalist></strong></p>
+        </div>
+        <div><p>
+                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                <strong><label style="margin-left:20px ;"> Login:</label><input style="margin-left: 20px" type="text"  name="login" th:value="${userlogin}" >
+                    </strong>
+            </p>
+        </div>
+        <div class="input-box">
+            <input type="submit" name="chercher" value="Chercher">
+        </div>
+        <a href="/accueil">retour à l'accueil</a>
+    </form>
+
+</div></center>
+</body>
+</html>
