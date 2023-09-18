@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des matchs</title>
+  <style>
+    /* Style pour le tableau */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Style pour l'en-tête de la page */
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<h1>Liste des matchs:</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Heure</th>
+    <th>Date</th>
+    <th>Nombre de joueurs</th>
+    <!-- Ajoutez d'autres en-têtes de colonnes si nécessaire -->
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="match : ${matches}">
+    <td th:text="${match.heure}"></td>
+    <td th:text="${match.date}"></td>
+    <td th:text="${match.nbr_joueurs}"></td>
+    <!-- Ajoutez d'autres cellules de données si nécessaire -->
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

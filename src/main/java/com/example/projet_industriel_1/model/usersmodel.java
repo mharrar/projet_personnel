@@ -1,13 +1,5 @@
 package com.example.projet_industriel_1.model;
-
-
-
-
-
-
-
 import javax.persistence.*;
-
 import java.util.Objects;
 
 

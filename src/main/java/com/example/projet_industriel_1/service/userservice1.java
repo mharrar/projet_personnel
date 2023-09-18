@@ -4,6 +4,7 @@ import com.example.projet_industriel_1.model.match;
 import com.example.projet_industriel_1.model.usersmodel;
 import com.example.projet_industriel_1.repository.usersmatch;
 import com.example.projet_industriel_1.repository.usersrepository;
+import com.fasterxml.jackson.databind.deser.DataFormatReaders;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -28,6 +29,12 @@ public class userservice1 {
             m1.setLogin(login);
             return usersmatche.save(m1);
         }}
+    public List<match> getAllMatches() {
+        return usersmatche.findAll(); // Utilisez la méthode findAll() ou une méthode personnalisée selon votre modèle de données
+    }
+
+
+
 
 
 

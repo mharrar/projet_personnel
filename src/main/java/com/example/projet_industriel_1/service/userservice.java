@@ -14,6 +14,7 @@ import java.util.Optional;
 @Service
 public class userservice {
     private final usersrepository usersrepo;
+    private String x;
 
 
 
@@ -22,7 +23,7 @@ public class userservice {
     }
 
     public usersmodel registeruser(String login, String password, String email,String fullname,String numero_telephone) {
-        if (login == null || password == null) {
+        if (login == null || password == null || email == null || fullname == null || numero_telephone == null) {
             return null;
         } else {
             usersmodel usersmode = new usersmodel();
@@ -32,7 +33,8 @@ public class userservice {
             usersmode.setFullname(fullname);
             usersmode.setNumero_telephone(numero_telephone);
             return usersrepo.save(usersmode);
-        }}
+        }
+    }
 
 
 
